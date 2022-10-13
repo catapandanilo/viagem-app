@@ -23,8 +23,8 @@ public class ClienteResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response findById(@PathParam("id") Long id){
-        return Response.ok(Cliente.findById(id)).build();
+    public Cliente findById(@PathParam("id") Long id){
+        return Cliente.findById(id);
     }
 
     @DELETE

@@ -1,6 +1,7 @@
 package com.danilocatapan.reserva;
 
 import com.danilocatapan.cliente.Cliente;
+import com.danilocatapan.cliente.ClienteService;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.inject.Inject;
@@ -17,11 +18,15 @@ public class ReservaResource {
     @RestClient
     ReservaService service;
 
+    @Inject
+    @RestClient
+    ClienteService clienteService;
+
     @GET
-    @Path("newReserva")
     @Produces(MediaType.APPLICATION_JSON)
     public Response newReserva() {
-        Cliente cliente = Cliente.of(2, "danilo c");
-        return service.newReserva(Reserva.of(cliente));
+        Cliente cliente = clienteService.findById(2);
+        Reserva reserva = Reserva.of(cliente);
+        return service.newReserva(reserva);
     }
 }

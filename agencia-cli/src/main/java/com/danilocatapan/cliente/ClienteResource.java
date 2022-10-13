@@ -8,7 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
 @Path("cliente-cli")
 public class ClienteResource {
@@ -20,12 +19,12 @@ public class ClienteResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response findById(@PathParam("id") Long id) {
+    public Cliente findById(@PathParam("id") Long id) {
         return service.findById(id);
     }
 
     @GET
-    public Response newCliente() {
+    public String newCliente() {
         Cliente cliente = Cliente.of(99, "Remoto");
         return service.newCliente(cliente);
     }

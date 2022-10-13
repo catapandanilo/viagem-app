@@ -12,7 +12,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/cliente")
-@Produces(MediaType.APPLICATION_JSON)
 public class ClienteResource {
 
     @GET

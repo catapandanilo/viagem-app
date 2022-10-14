@@ -1,0 +1,635 @@
+{
+	"info": {
+		"_postman_id": "3da933c7-4ff5-42ce-a172-fa7031647c22",
+		"name": "Confraria-Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9197795"
+	},
+	"item": [
+		{
+			"name": "viagem-app",
+			"item": [
+				{
+					"name": "agencia-app",
+					"item": [
+						{
+							"name": "cliente",
+							"item": [
+								{
+									"name": "clientes obter",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/cliente",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cliente"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente obter por id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/cliente/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cliente",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente cadastrar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nome\": \"danilo\"\r\n}"
+										},
+										"url": {
+											"raw": "http://localhost:8080/cliente",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cliente"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente deletar por id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/cliente/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"cliente",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "reserva",
+							"item": [
+								{
+									"name": "reservas obter",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8080/reserva",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"reserva"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "reserva cadastrar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"reserva1\"\r\n}"
+										},
+										"url": {
+											"raw": "http://localhost:8080/reserva",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"reserva"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "agencia-cliente-micro",
+					"item": [
+						{
+							"name": "sandbox-aws",
+							"item": [
+								{
+									"name": "clientes obter",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "a82aa2f9dbaab42cea9c85247ce54334-1335372305.us-east-1.elb.amazonaws.com/cliente",
+											"host": [
+												"a82aa2f9dbaab42cea9c85247ce54334-1335372305",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"cliente"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente obter por id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "a82aa2f9dbaab42cea9c85247ce54334-1335372305.us-east-1.elb.amazonaws.com/cliente/1",
+											"host": [
+												"a82aa2f9dbaab42cea9c85247ce54334-1335372305",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"cliente",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente cadastrar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nome\": \"danilo\"\r\n}"
+										},
+										"url": {
+											"raw": "a82aa2f9dbaab42cea9c85247ce54334-1335372305.us-east-1.elb.amazonaws.com/cliente",
+											"host": [
+												"a82aa2f9dbaab42cea9c85247ce54334-1335372305",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"cliente"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente deletar por id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "a82aa2f9dbaab42cea9c85247ce54334-1335372305.us-east-1.elb.amazonaws.com/cliente/1",
+											"host": [
+												"a82aa2f9dbaab42cea9c85247ce54334-1335372305",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"cliente",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "clientes obter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8181/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cliente obter por id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8181/cliente/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"cliente",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cliente cadastrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"danilo\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8181/cliente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"cliente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cliente deletar por id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8181/cliente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"cliente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "agencia-reserva-micro",
+					"item": [
+						{
+							"name": "sandbox-aws",
+							"item": [
+								{
+									"name": "reservas obter",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "ac276963d552b479da85e318c176e5ce-803439474.us-east-1.elb.amazonaws.com/reserva",
+											"host": [
+												"ac276963d552b479da85e318c176e5ce-803439474",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"reserva"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "reserva cadastrar",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"reserva1\"\r\n}"
+										},
+										"url": {
+											"raw": "ac276963d552b479da85e318c176e5ce-803439474.us-east-1.elb.amazonaws.com/reserva",
+											"host": [
+												"ac276963d552b479da85e318c176e5ce-803439474",
+												"us-east-1",
+												"elb",
+												"amazonaws",
+												"com"
+											],
+											"path": [
+												"reserva"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "reservas obter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8182/reserva",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8182",
+									"path": [
+										"reserva"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reserva cadastrar",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"reserva1\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8182/reserva",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8182",
+									"path": [
+										"reserva"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "agencia-cli",
+					"item": [
+						{
+							"name": "cliente",
+							"item": [
+								{
+									"name": "cliente obter por id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8081/cliente-cli/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"cliente-cli",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cliente cadastrar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8081/cliente-cli/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"cliente-cli",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "reserva",
+							"item": [
+								{
+									"name": "reserva cadastrar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8081/reserva-cli/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"reserva-cli",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

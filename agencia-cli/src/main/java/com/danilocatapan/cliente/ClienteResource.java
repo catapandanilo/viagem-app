@@ -1,5 +1,6 @@
 package com.danilocatapan.cliente;
 
+import org.eclipse.microprofile.faulttolerance.CircuitBreaker;
 import org.eclipse.microprofile.faulttolerance.Fallback;
 import org.eclipse.microprofile.faulttolerance.Timeout;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
@@ -25,6 +26,12 @@ public class ClienteResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Timeout(unit = ChronoUnit.SECONDS, value = 3) //se demorar +3 segundos exception timeout
     @Fallback(fallbackMethod = "fallback")
+    @CircuitBreaker(
+        requestVolumeThreshold=4, // a cada 4 req valida novamente
+        failureRatio=0.5, //% falha, a cada 2 de 4 req vai abrir o circuito
+        delay=6000,//a cada 6S fica com o circuito aberto, entra no Fallback
+        successThreshold=1 //se 1 sucesso, fecha circuito
+    )
     public Cliente findById(@PathParam("id") long id) {
         return service.findById(id);
     }

@@ -15,7 +15,7 @@ public class GreetingResourceTest {
           .when().get("/hello")
           .then()
              .statusCode(200)
-             .body(is("Hello Hello AGENCIA-CLIENTE-MICRO"));
+             .body(is("Hello AGENCIA-MICRO-CLIENTE"));
     }
 
 }

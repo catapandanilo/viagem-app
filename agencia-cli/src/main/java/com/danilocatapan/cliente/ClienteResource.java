@@ -1,6 +1,10 @@
 package com.danilocatapan.cliente;
 
+import org.eclipse.microprofile.faulttolerance.Fallback;
+import org.eclipse.microprofile.faulttolerance.Timeout;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
+
+import java.time.temporal.ChronoUnit;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -19,7 +23,9 @@ public class ClienteResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Cliente findById(@PathParam("id") Long id) {
+    @Timeout(unit = ChronoUnit.SECONDS, value = 3) //se demorar +3 segundos exception timeout
+    @Fallback(fallbackMethod = "fallback")
+    public Cliente findById(@PathParam("id") long id) {
         return service.findById(id);
     }
 
@@ -29,4 +35,7 @@ public class ClienteResource {
         return service.newCliente(cliente);
     }
 
+    private Cliente fallback(long id){
+        return Cliente.of(id, "fallback");
+    }
 }
